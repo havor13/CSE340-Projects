@@ -10,12 +10,12 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Home route
-app.get('/', (req, res) => {
-  res.render('index');
-});
+// Use routes
+const indexRouter = require('./routes/index');
+app.use('/', indexRouter);
 
-const PORT = process.env.PORT || 3000;
+// Port setup (Render + local)
+const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
   console.log(`CSE Motors running at http://localhost:${PORT}`);
 });

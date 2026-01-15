@@ -1,3 +1,13 @@
-<footer>
-  <p>&copy; 2026 CSE Motors. All rights reserved.</p>
-</footer>
+<div class="site-footer">
+  <p>&copy; <span id="year"></span> CSE Motors • Kumasi, Ghana</p>
+  <nav aria-label="Footer navigation">
+    <a href="/contact">Contact Us</a> | 
+    <a href="/about">About</a> | 
+    <a href="/inventory">Inventory</a>
+  </nav>
+</div>
+
+<script>
+  // Auto-update year for copyright
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>

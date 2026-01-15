@@ -1,27 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <%- include('partials/head') %>
-  <body>
-    <%- include('partials/header') %>
-    <%- include('partials/nav') %>
+<main>
+  <section class="hero">
+    <img src="/images/dealership.webp" alt="Front view of CSE Motors dealership building">
+    <div class="hero-text">
+      <h1>Welcome to CSE Motors</h1>
+      <p>Your trusted car dealership for quality vehicles.</p>
+    </div>
+  </section>
 
-    <main>
-      <section class="hero">
-        <img src="/images/dealership.webp" alt="CSE Motors Dealership">
-        <h1>Welcome to CSE Motors</h1>
-        <p>Your trusted car dealership for quality vehicles.</p>
-      </section>
-
-      <section class="features">
-        <h2>Featured Cars</h2>
-        <div class="car-grid">
-          <img src="/images/car1.webp" alt="Car 1">
-          <img src="/images/car2.webp" alt="Car 2">
-          <img src="/images/car3.webp" alt="Car 3">
-        </div>
-      </section>
-    </main>
-
-    <%- include('partials/footer') %>
-  </body>
-</html>
+  <section class="features" aria-label="Featured Cars">
+    <h2>Featured Cars</h2>
+    <div class="car-grid">
+      <article>
+        <img src="/images/car1.webp" alt="Blue sedan parked outside dealership">
+        <h3>Sedan</h3>
+        <p>Comfort and efficiency for city driving.</p>
+      </article>
+      <article>
+        <img src="/images/car2.webp" alt="White SUV in showroom">
+        <h3>SUV</h3>
+        <p>Space and capability for family adventures.</p>
+      </article>
+      <article>
+        <img src="/images/car3.webp" alt="Black pickup truck on lot">
+        <h3>Truck</h3>
+        <p>Power and durability for work and play.</p>
+      </article>
+    </div>
+  </section>
+</main>
