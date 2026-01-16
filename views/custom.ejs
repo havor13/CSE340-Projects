@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+    <%- include('partials/nav') %>
+
+    <main id="main-content">
+      <section class="custom" aria-labelledby="custom-title">
+        <h2 id="custom-title">Custom Builds</h2>
+        <p>Design your dream car with CSE Motors! Choose upgrades, styles, and features to make it unique.</p>
+
+        <div class="custom-grid">
+          <article>
+            <img src="/images/custom1.webp" alt="Custom build option 1">
+            <h3>Performance Package</h3>
+            <p>Boost speed and handling with premium upgrades.</p>
+          </article>
+          <article>
+            <img src="/images/custom2.webp" alt="Custom build option 2">
+            <h3>Style Package</h3>
+            <p>Flame decals, luxury interiors, and bold colors.</p>
+          </article>
+          <article>
+            <img src="/images/custom3.webp" alt="Custom build option 3">
+            <h3>Tech Package</h3>
+            <p>Smart navigation, entertainment, and futuristic features.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

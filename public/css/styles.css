@@ -1,0 +1,332 @@
+/* Base styles (mobile-first) */
+:root {
+  --blue-700: #0066cc;
+  --blue-500: #00bfff;
+  --text-900: #111;
+  --text-800: #222;
+  --bg-100: #f9f9f9;
+  --accent-500: #ffeb3b;
+  --shadow: rgba(0,0,0,0.1);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-800);
+  background: var(--bg-100);
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+  color: #fff;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.site-header .account {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Navigation */
+.site-nav {
+  background: var(--blue-500);
+}
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.nav a {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+  color: var(--accent-500);
+}
+
+/* Main */
+main {
+  padding: 1rem;
+}
+
+/* Welcome */
+.welcome {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.welcome h2 {
+  font-size: 1.5rem;
+  color: var(--text-900);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.hero-text {
+  margin-top: 1rem;
+}
+.hero-text h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text-900);
+}
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+.features-list li {
+  margin-bottom: 0.25rem;
+}
+.cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--blue-700);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cta:hover,
+.cta:focus {
+  background: #004c99;
+}
+
+/* Upgrades */
+.upgrades {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.upgrade-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.upgrade-grid article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+.upgrade-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Reviews */
+.reviews {
+  padding: 2rem 1rem;
+  background: #f0f0f0;
+}
+.review-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.review-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.stars {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Car Grid */
+.car-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.car-grid article {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.car-grid article:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.car-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.car-grid h3 {
+  margin: 0.75rem 0 0.25rem;
+  color: var(--text-900);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #333, #555);
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+.site-footer a {
+  margin: 0 0.5rem;
+  color: var(--blue-500);
+  font-weight: 600;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+  color: var(--accent-500);
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+    padding: 2rem 0;
+  }
+
+  .upgrade-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .car-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+}
+
+/* Large screens (desktop and beyond) */
+@media (min-width: 1024px) {
+  /* Header spacing */
+  .site-header {
+    padding: 2rem 3rem;
+  }
+  .site-header h1 {
+    font-size: 2.25rem;
+  }
+
+  /* Navigation bar */
+  .nav {
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Hero section side-by-side */
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  .features-list li {
+    font-size: 1.1rem;
+  }
+  .cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Upgrades grid */
+  .upgrade-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .upgrade-grid article {
+    padding: 1.5rem;
+  }
+
+  /* Reviews section */
+  .reviews {
+    padding: 3rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Car inventory grid */
+  .car-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .car-grid article {
+    padding: 1.5rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.custom-grid article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.custom-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .custom-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

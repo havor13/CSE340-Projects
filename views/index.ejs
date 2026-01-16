@@ -1,30 +1,85 @@
-<main>
-  <section class="hero" aria-label="Hero">
-    <img src="/images/dealership.webp" alt="Front view of CSE Motors dealership building">
-    <div class="hero-text">
-      <h1>Welcome to CSE Motors</h1>
-      <p>Your trusted car dealership for quality vehicles.</p>
-    </div>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+    <%- include('partials/nav') %>
 
-  <section class="features" aria-labelledby="featured-heading">
-    <h2 id="featured-heading">Featured Cars</h2>
-    <div class="car-grid">
-      <article>
-        <img src="/images/car1.webp" alt="Blue sedan parked outside dealership">
-        <h3>Sedan</h3>
-        <p>Comfort and efficiency for city driving.</p>
-      </article>
-      <article>
-        <img src="/images/car2.webp" alt="White SUV in showroom">
-        <h3>SUV</h3>
-        <p>Space and capability for family adventures.</p>
-      </article>
-      <article>
-        <img src="/images/car3.webp" alt="Black pickup truck on lot">
-        <h3>Truck</h3>
-        <p>Power and durability for work and play.</p>
-      </article>
-    </div>
-  </section>
-</main>
+    <main id="main-content">
+
+      <!-- Featured Vehicle Section -->
+      <section class="hero" aria-labelledby="delorean-title">
+        <img src="/images/delorean.webp" alt="DMC Delorean with iconic design">
+        <div class="hero-text">
+          <h2 id="delorean-title">DMC Delorean</h2>
+          <ul class="features-list">
+            <li>3 Cup holders</li>
+            <li>Superman doors</li>
+            <li>Fuzzy dice</li>
+          </ul>
+          <a class="cta" href="#inventory">Own Today</a>
+        </div>
+      </section>
+
+      <!-- Delorean Upgrades Section -->
+      <section class="upgrades" aria-labelledby="upgrades-title">
+        <h2 id="upgrades-title">Delorean Upgrades</h2>
+        <div class="upgrade-grid">
+          <article>
+            <img src="/images/flux-capacitor.webp" alt="Flux Capacitor upgrade">
+            <h3>Flux Capacitor</h3>
+          </article>
+          <article>
+            <img src="/images/flame-decals.webp" alt="Flame Decals upgrade">
+            <h3>Flame Decals</h3>
+          </article>
+          <article>
+            <img src="/images/bumper-stickers.webp" alt="Bumper Stickers upgrade">
+            <h3>Bumper Stickers</h3>
+          </article>
+          <article>
+            <img src="/images/hub-caps.webp" alt="Hub Caps upgrade">
+            <h3>Hub Caps</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- Delorean Reviews Section -->
+      <section class="reviews" aria-labelledby="reviews-title">
+        <h2 id="reviews-title">DMC Delorean Reviews</h2>
+        <ul class="review-list">
+          <li>“So fast it’s almost like traveling in time.” <span class="stars">★★★★☆</span></li>
+          <li>“Coolest ride on the road.” <span class="stars">★★★★☆</span></li>
+          <li>“I’m feeling McFly!” <span class="stars">★★★★★</span></li>
+          <li>“The most futuristic ride of our day.” <span class="stars">★★★★½</span></li>
+          <li>“80’s livin and I love it!” <span class="stars">★★★★★</span></li>
+        </ul>
+      </section>
+
+      <!-- Car Inventory Grid -->
+      <section class="features car-grid" id="inventory">
+        <article id="sedan">
+          <img src="/images/car1.webp" alt="Reliable sedan in silver">
+          <h3>Reliable Sedans</h3>
+          <p>Comfort and efficiency for everyday driving.</p>
+        </article>
+
+        <article id="suv">
+          <img src="/images/car2.webp" alt="Spacious SUV in blue">
+          <h3>Powerful SUVs</h3>
+          <p>Space and strength for family adventures.</p>
+        </article>
+
+        <article id="luxury">
+          <img src="/images/car3.webp" alt="Luxury model in black">
+          <h3>Luxury Models</h3>
+          <p>Style and performance at its finest.</p>
+        </article>
+      </section>
+
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
+
